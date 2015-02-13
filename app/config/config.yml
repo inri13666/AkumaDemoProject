@@ -102,12 +102,12 @@ fos_user:
 
 akuma_social:
     auto_create: true
-#    facebook:
-#        id: %facebook_id%
-#        secret: %facebook_secret%
-#    google:
-#        id: %google_id%
-#        secret: %google_secret%
-#    microsoft:
-#        id: %microsoft_id%
-#        secret: %microsoft_secret%
+    facebook:
+        id: %facebook_id%
+        secret: %facebook_secret%
+    google:
+        id: %google_id%
+        secret: %google_secret%
+    microsoft:
+        id: %microsoft_id%
+        secret: %microsoft_secret%

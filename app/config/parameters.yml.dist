@@ -20,9 +20,9 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     #Akuma Social Params
-#    facebook_id: ''
-#    facebook_secret: ''
-#    google_id: ''
-#    google_secret: ''
-#    microsoft_id: ''
-#    microsoft_secret: ''
+    facebook_id: ''
+    facebook_secret: ''
+    google_id: ''
+    google_secret: ''
+    microsoft_id: ''
+    microsoft_secret: ''

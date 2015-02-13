@@ -7,42 +7,42 @@ security:
             chain:
                 providers:
                     - fos_userbundle
-#                    - akuma_social_facebook
-#                    - akuma_social_google
-#                    - akuma_social_microsoft
+                    - akuma_social_facebook
+                    - akuma_social_google
+                    - akuma_social_microsoft
         fos_userbundle:
             id: fos_user.user_provider.username
-#        akuma_social_facebook:
-#            id: fos_user.user_provider.username
-#        akuma_social_google:
-#            id: fos_user.user_provider.username
-#        akuma_social_microsoft:
-#            id: fos_user.user_provider.username
+        akuma_social_facebook:
+            id: fos_user.user_provider.username
+        akuma_social_google:
+            id: fos_user.user_provider.username
+        akuma_social_microsoft:
+            id: fos_user.user_provider.username
 
     firewalls:
         main:
             pattern: ^/
 
-#            akuma_social_facebook:
-#                provider: akuma_social_facebook
-#                login_path: /user/login
-#                #TODO Add route name support
-#                check_path: /facebook/connect
-#                default_target_path: /
-#
-#            akuma_social_google:
-#                provider: akuma_social_google
-#                login_path: /user/login
-#                #TODO Add route name support
-#                check_path: /google/connect
-#                default_target_path: /
-#
-#            akuma_social_microsoft:
-#                provider: akuma_social_microsoft
-#                login_path: /user/login
-#                #TODO Add route name support
-#                check_path: /microsoft/connect
-#                default_target_path: /
+            akuma_social_facebook:
+                provider: akuma_social_facebook
+                login_path: /user/login
+                #TODO Add route name support
+                check_path: /facebook/connect
+                default_target_path: /
+
+            akuma_social_google:
+                provider: akuma_social_google
+                login_path: /user/login
+                #TODO Add route name support
+                check_path: /google/connect
+                default_target_path: /
+
+            akuma_social_microsoft:
+                provider: akuma_social_microsoft
+                login_path: /user/login
+                #TODO Add route name support
+                check_path: /microsoft/connect
+                default_target_path: /
 
             form_login:
                   provider: fos_userbundle
