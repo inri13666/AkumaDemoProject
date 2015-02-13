@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block template_files %}
+        <!-- {{ _self.getTemplateName() }} -->
+    {% endblock %}
+    {% block page_title %}
+        <title>Akuma Demo Project</title>
+    {% endblock %}
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    {% stylesheets
+    'css/bootstrap.css'
+    output='css/style.css'
+    filter="cssrewrite" %}
+    <link href="{{ asset_url }}" rel="stylesheet">
+    {% endstylesheets %}
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+{% include 'BraincraftedBootstrapBundle::flash.html.twig' with { 'close': true } %}
+{% spaceless %}
+    {% block container_header %}{% endblock %}
+    {% block container_body %}{% endblock %}
+    {% block container_footer %}{% endblock %}
+{% endspaceless %}
+{% block javascripts %}
+    {% javascripts
+    'js/jquery.js'
+    'js/bootstrap.js'
+    output='js/script.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+</body>
+</html>

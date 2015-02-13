@@ -1,0 +1,71 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: plaintext
+
+    providers:
+        chainprovider:
+            chain:
+                providers:
+                    - fos_userbundle
+#                    - akuma_social_facebook
+#                    - akuma_social_google
+#                    - akuma_social_microsoft
+        fos_userbundle:
+            id: fos_user.user_provider.username
+#        akuma_social_facebook:
+#            id: fos_user.user_provider.username
+#        akuma_social_google:
+#            id: fos_user.user_provider.username
+#        akuma_social_microsoft:
+#            id: fos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: ^/
+
+#            akuma_social_facebook:
+#                provider: akuma_social_facebook
+#                login_path: /user/login
+#                #TODO Add route name support
+#                check_path: /facebook/connect
+#                default_target_path: /
+#
+#            akuma_social_google:
+#                provider: akuma_social_google
+#                login_path: /user/login
+#                #TODO Add route name support
+#                check_path: /google/connect
+#                default_target_path: /
+#
+#            akuma_social_microsoft:
+#                provider: akuma_social_microsoft
+#                login_path: /user/login
+#                #TODO Add route name support
+#                check_path: /microsoft/connect
+#                default_target_path: /
+
+            form_login:
+                  provider: fos_userbundle
+                  csrf_provider: form.csrf_provider
+                  login_path:     /user/login
+                  use_forward:    false
+                  check_path:     /user/login_check
+                  failure_path:   null
+            logout:
+                path: /user/logout
+            anonymous: ~
+            remember_me:
+                  key:      "%secret%"
+                  lifetime: 4147200
+                  path:     /
+                  domain:   ~
+        dev:
+            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
+            security: false
+
+        default:
+            anonymous: ~
+
+    access_control:
+        - { path: ^/user/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/secured, role: ROLE_USER }

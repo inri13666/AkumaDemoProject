@@ -1,0 +1,17 @@
+/web/bundles/
+/web/fonts/
+/web/js/
+/web/css/
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/app/phpunit.xml
+/build/
+/vendor/
+/bin/
+/.idea
+/composer.phar
+/composer.lock

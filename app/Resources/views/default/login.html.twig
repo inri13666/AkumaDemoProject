@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block template_files %}
+    {{ parent() }}
+    <!-- {{ _self.getTemplateName() }} -->
+{% endblock %}
+
+{% block page_title %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block container_header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block container_body %}
+    {{ parent() }}
+    Hello Anonymous =))
+    <br/>
+    <br/>
+    <a class="btn btn-success" href="{{ social_login_url('facebook') }}">Facebook</a>
+    <br/>
+    <br/>
+    <a class="btn btn-info" href="{{ social_login_url('google') }}">Google</a>
+    <br/>
+    <br/>
+    <a class="btn btn-danger" href="{{ social_login_url('microsoft') }}">Microsoft</a>
+    <br/>
+    <br/>
+{% endblock %}
+
+{% block container_footer %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+

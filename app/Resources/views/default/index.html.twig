@@ -1,0 +1,6 @@
+{% extends 'base.html.twig' %}
+
+{% block container_body %}
+    Hello {{ name }}!!!
+    <a class="btn btn-warning" style="float: right" href="{{ path('fos_user_security_logout') }}">Logout</a>
+{% endblock %}
