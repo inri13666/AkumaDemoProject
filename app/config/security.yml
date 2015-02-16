@@ -25,21 +25,21 @@ security:
 
             akuma_social_facebook:
                 provider: akuma_social_facebook
-                login_path: /user/login
+                login_path: /
                 #TODO Add route name support
                 check_path: /facebook/connect
                 default_target_path: /
 
             akuma_social_google:
                 provider: akuma_social_google
-                login_path: /user/login
+                login_path: /
                 #TODO Add route name support
                 check_path: /google/connect
                 default_target_path: /
 
             akuma_social_microsoft:
                 provider: akuma_social_microsoft
-                login_path: /user/login
+                login_path: /
                 #TODO Add route name support
                 check_path: /microsoft/connect
                 default_target_path: /

@@ -96,7 +96,7 @@ fos_user:
     db_driver: orm
     firewall_name: main
     #use_listener: false
-    user_class: AkumaUserBundle:User
+    user_class: AppBundle:User
     #resetting:
     #    token_ttl: 3600
 
